@@ -1,12 +1,16 @@
-from flask import Flask, render_template 
-import os
-
+from flask import Flask
+from datetime import datetime
 app = Flask(__name__)
 
 @app.route("/")
-@app.route("/home")
-def home():
-    return render_template("index.html")
+
+def hello_world():
+    return "Hello world"
+
+@app.route("/time")
+
+def  istime():
+    return datetime.now().strftime("%H:%M:%S")
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT',5000))
