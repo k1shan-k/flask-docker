@@ -1,5 +1,5 @@
 FROM python:3
-LABEL author="Prajwal"
+LABEL author="Kishan"
 WORKDIR /app
 COPY ./requirements.txt requirements.txt
 RUN pip install -r requirements.txt
